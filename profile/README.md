@@ -10,8 +10,4 @@ Platine PHP is a web framework that allows you to create web applications with P
 -  It has a console library that helps you create and run commands.  
 -  It has a configuration library that supports multiple formats and environments.  
 
-If you want to learn more about Platine PHP, you can visit their official website or check out their documentation. 
-You can also install Platine PHP using Composer by running the following command:  
-```bash
-composer create-project platine-php/app my-app
-```
+If you want to learn more about Platine PHP, you can visit official website or check out the documentation.
