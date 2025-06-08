@@ -20,6 +20,6 @@
 -  Supports plug-in extensions
 -  Built-in a variety of commonly used middleware
 -  Built-in JSON output
--  PHP  7.4+
+-  PHP  8.0+
 - PDF generation
 - Office document templating (Microsoft Word, libre Office)
