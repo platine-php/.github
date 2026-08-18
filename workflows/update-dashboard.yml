@@ -1,0 +1,98 @@
+name: Update Actions Dashboard
+
+on:
+  workflow_dispatch: # Manual trigger
+  schedule:
+    - cron: '*/15 * * * *' 
+
+permissions:
+  contents: write
+  actions: read
+
+jobs:
+  update-dashboard:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.x'
+
+      - name: Install dependencies
+        run: |
+          pip install PyGithub
+
+      - name: Generate and update dashboard
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          python - <<EOF
+          import os
+          from github import Github
+          from datetime import datetime
+          
+          # Initialize GitHub client
+          g = Github(os.environ['GITHUB_TOKEN'])
+          org_name = "platine-php"
+          org = g.get_organization(org_name)
+          
+          # Build the dashboard content
+          dashboard = "# 🚀 CI/CD Dashboard\n\n"
+          dashboard += "| Repository | Workflow | Status | Last Run |\n"
+          dashboard += "|------------|----------|--------|----------|\n"
+          
+          for repo in org.get_repos():
+              workflows = repo.get_workflows()
+              for workflow in workflows:
+                  runs = workflow.get_runs(status='completed')
+                  if runs.totalCount > 0:
+                      latest_run = runs[0]
+                      status = latest_run.conclusion.lower()
+                      
+                      if status == 'success':
+                          badge = f"![Success](https://img.shields.io/badge/Success-brightgreen)"
+                      elif status == 'failure':
+                          badge = f"![Failure](https://img.shields.io/badge/Failure-red)"
+                      else:
+                          badge = f"![{status.capitalize()}](https://img.shields.io/badge/{status.capitalize()}-yellow)"
+                      
+                      last_run_time = latest_run.created_at.strftime("%Y-%m-%d %H:%M:%S")
+                      dashboard += f"| [{repo.name}]({repo.html_url}) | {workflow.name} | {badge} | {last_run_time} |\n"
+          
+          dashboard += f"\n\n*Last updated: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')} UTC*"
+          
+          # Write ONLY to dashboard.md (overwrites completely)
+          with open('profile/dashboard.md', 'w') as f:
+              f.write(dashboard)
+          EOF
+
+      - name: Inject dashboard into README
+        run: |
+          python - <<EOF
+          # Read the dashboard content
+          with open('profile/dashboard.md', 'r') as f:
+              dashboard_content = f.read()
+          
+          # Read the main README
+          with open('profile/README.md', 'r') as f:
+              readme_content = f.read()
+          
+          # Replace placeholder with dashboard content
+          # The placeholder is [DASHBOARD_CONTENT]
+          new_readme = readme_content.replace('[DASHBOARD_CONTENT]', dashboard_content)
+          
+          # Write back to README
+          with open('profile/README.md', 'w') as f:
+              f.write(new_readme)
+          EOF
+
+      - name: Commit and push changes
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email 'github-actions[bot]@users.noreply.github.com'
+          git add profile/README.md profile/dashboard.md
+          git diff --staged --quiet || git commit -m "Update Actions dashboard [skip ci]"
+          git push
