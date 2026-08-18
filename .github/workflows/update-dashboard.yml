@@ -54,7 +54,7 @@ jobs:
                   runs = workflow.get_runs(status='completed')
                   if runs.totalCount > 0:
                       latest_run = runs[0]
-                      print(lastest_run)
+                      print(latest_run)
                       status = latest_run.conclusion.lower()
                       
                       if status == 'success':
