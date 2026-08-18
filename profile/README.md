@@ -24,9 +24,6 @@
 - Office document templating (Microsoft Word, libre Office)
 
 ## CI/CD Status Dashboard
-<!-- Dashboard content will be injected here -->
-# 🚀 CI/CD Dashboard
-
 | Repository | Workflow | Status | Last Run |
 |------------|----------|--------|----------|
 | [cache](https://github.com/platine-php/cache) | Tests | ![Failure](https://img.shields.io/badge/Failure-red) | 2026-08-17 03:31:58 |
@@ -93,11 +90,10 @@
 | [oauth2](https://github.com/platine-php/oauth2) | Dependabot Updates | ![Success](https://img.shields.io/badge/Success-brightgreen) | 2026-08-17 20:42:33 |
 | [etl](https://github.com/platine-php/etl) | Tests | ![Failure](https://img.shields.io/badge/Failure-red) | 2026-08-17 03:32:47 |
 | [etl](https://github.com/platine-php/etl) | Dependabot Updates | ![Success](https://img.shields.io/badge/Success-brightgreen) | 2026-08-17 14:43:25 |
-| [.github](https://github.com/platine-php/.github) | Update Actions Dashboard | ![Failure](https://img.shields.io/badge/Failure-red) | 2026-08-18 03:33:56 |
 | [starter](https://github.com/platine-php/starter) | Tests | ![Success](https://img.shields.io/badge/Success-brightgreen) | 2026-08-17 03:34:13 |
 | [starter](https://github.com/platine-php/starter) | Dependabot Updates | ![Success](https://img.shields.io/badge/Success-brightgreen) | 2026-08-17 06:52:27 |
 | [webauthn](https://github.com/platine-php/webauthn) | Tests | ![Success](https://img.shields.io/badge/Success-brightgreen) | 2026-08-17 03:34:45 |
 | [webauthn](https://github.com/platine-php/webauthn) | Dependabot Updates | ![Success](https://img.shields.io/badge/Success-brightgreen) | 2026-08-17 10:22:40 |
 
 
-*Last updated: 2026-08-18 03:36:34 UTC*
+*Last updated: 2026-08-18 03:58:43 UTC*
