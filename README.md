@@ -1,1 +1,1 @@
-Platine PHP 
+Platine PHP Framework
