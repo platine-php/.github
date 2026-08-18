@@ -26,7 +26,6 @@
 ## CI/CD Status Dashboard
 | Repository | Workflow | Status | Last Run |
 |------------|----------|--------|----------|
-| [.github](https://github.com/platine-php/.github) | Update Actions Dashboard | ![Failure](https://img.shields.io/badge/Failure-red) | 2026-08-18 18:14:48 |
 | [app](https://github.com/platine-php/app) | Tests | ![Success](https://img.shields.io/badge/Success-brightgreen) | 2026-08-18 15:56:34 |
 | [app](https://github.com/platine-php/app) | Dependabot Updates | ![Success](https://img.shields.io/badge/Success-brightgreen) | 2026-08-18 11:32:12 |
 | [cache](https://github.com/platine-php/cache) | Tests | ![Success](https://img.shields.io/badge/Success-brightgreen) | 2026-08-18 15:56:48 |
@@ -97,4 +96,4 @@
 | [webauthn](https://github.com/platine-php/webauthn) | Dependabot Updates | ![Success](https://img.shields.io/badge/Success-brightgreen) | 2026-08-18 10:22:15 |
 
 
-*Last updated: 2026-08-18 18:30:11 UTC*
+*Last updated: 2026-08-18 18:43:56 UTC*
