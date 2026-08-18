@@ -26,12 +26,12 @@
 ## CI/CD Status Dashboard
 | Repository | Workflow | Status | Last Run |
 |------------|----------|--------|----------|
-| [.github](https://github.com/platine-php/.github) | Update Actions Dashboard | ![Success](https://img.shields.io/badge/Success-brightgreen) | 2026-08-18 04:25:30 |
-| [app](https://github.com/platine-php/app) | Tests | ![Failure](https://img.shields.io/badge/Failure-red) | 2026-08-17 03:31:53 |
+| [.github](https://github.com/platine-php/.github) | Update Actions Dashboard | ![Success](https://img.shields.io/badge/Success-brightgreen) | 2026-08-18 04:33:28 |
+| [app](https://github.com/platine-php/app) | Tests | ![Success](https://img.shields.io/badge/Success-brightgreen) | 2026-08-17 03:31:53 |
 | [app](https://github.com/platine-php/app) | Dependabot Updates | ![Success](https://img.shields.io/badge/Success-brightgreen) | 2026-08-17 11:32:27 |
-| [cache](https://github.com/platine-php/cache) | Tests | ![Failure](https://img.shields.io/badge/Failure-red) | 2026-08-17 03:31:58 |
+| [cache](https://github.com/platine-php/cache) | Tests | ![Success](https://img.shields.io/badge/Success-brightgreen) | 2026-08-15 15:19:40 |
 | [cache](https://github.com/platine-php/cache) | Dependabot Updates | ![Success](https://img.shields.io/badge/Success-brightgreen) | 2026-08-17 18:29:10 |
-| [collection](https://github.com/platine-php/collection) | Tests | ![Failure](https://img.shields.io/badge/Failure-red) | 2026-08-17 03:32:02 |
+| [collection](https://github.com/platine-php/collection) | Tests | ![Success](https://img.shields.io/badge/Success-brightgreen) | 2026-08-15 09:43:22 |
 | [collection](https://github.com/platine-php/collection) | Dependabot Updates | ![Success](https://img.shields.io/badge/Success-brightgreen) | 2026-08-17 05:42:30 |
 | [config](https://github.com/platine-php/config) | Tests | ![Success](https://img.shields.io/badge/Success-brightgreen) | 2026-08-17 03:32:07 |
 | [config](https://github.com/platine-php/config) | Dependabot Updates | ![Success](https://img.shields.io/badge/Success-brightgreen) | 2026-08-17 21:33:24 |
@@ -39,7 +39,7 @@
 | [console](https://github.com/platine-php/console) | Dependabot Updates | ![Success](https://img.shields.io/badge/Success-brightgreen) | 2026-08-17 07:43:16 |
 | [container](https://github.com/platine-php/container) | Tests | ![Failure](https://img.shields.io/badge/Failure-red) | 2026-08-17 03:32:18 |
 | [container](https://github.com/platine-php/container) | Dependabot Updates | ![Success](https://img.shields.io/badge/Success-brightgreen) | 2026-08-17 19:27:20 |
-| [cookie](https://github.com/platine-php/cookie) | Tests | ![Failure](https://img.shields.io/badge/Failure-red) | 2026-08-17 03:32:24 |
+| [cookie](https://github.com/platine-php/cookie) | Tests | ![Success](https://img.shields.io/badge/Success-brightgreen) | 2026-08-15 15:19:52 |
 | [cookie](https://github.com/platine-php/cookie) | Dependabot Updates | ![Success](https://img.shields.io/badge/Success-brightgreen) | 2026-08-18 00:12:14 |
 | [database](https://github.com/platine-php/database) | Tests | ![Failure](https://img.shields.io/badge/Failure-red) | 2026-08-17 03:32:31 |
 | [database](https://github.com/platine-php/database) | Dependabot Updates | ![Success](https://img.shields.io/badge/Success-brightgreen) | 2026-08-17 08:22:29 |
@@ -97,4 +97,4 @@
 | [webauthn](https://github.com/platine-php/webauthn) | Dependabot Updates | ![Success](https://img.shields.io/badge/Success-brightgreen) | 2026-08-17 10:22:40 |
 
 
-*Last updated: 2026-08-18 04:35:27 UTC*
+*Last updated: 2026-08-18 04:38:29 UTC*
