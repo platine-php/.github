@@ -45,8 +45,10 @@ jobs:
           # Build the dashboard content
           dashboard = "| Repository | Workflow | Status | Last Run |\n"
           dashboard += "|------------|----------|--------|----------|\n"
-          repos = sorted(org.get_repos(), key=lambda r: r.name.lower())
+          repos = org.get_repos(sort='full_name')
           for repo in repos:
+              if repo.name == '.github':
+                  continue
               workflows = repo.get_workflows()
               for workflow in workflows:
                   runs = workflow.get_runs(status='completed')
