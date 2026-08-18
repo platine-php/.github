@@ -23,3 +23,7 @@
 -  PHP  8.0+
 - PDF generation
 - Office document templating (Microsoft Word, libre Office)
+
+## CI/CD Status Dashboard
+<!-- Dashboard content will be injected here -->
+[DASHBOARD_CONTENT]
