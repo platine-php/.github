@@ -47,11 +47,14 @@ jobs:
           dashboard += "|------------|----------|--------|----------|\n"
           repos = sorted(org.get_repos(), key=lambda r: r.name.lower())
           for repo in repos:
+              print(repo)
               workflows = repo.get_workflows()
               for workflow in workflows:
+                  print(workflow)
                   runs = workflow.get_runs(status='completed')
                   if runs.totalCount > 0:
                       latest_run = runs[0]
+                      print(lastest_run)
                       status = latest_run.conclusion.lower()
                       
                       if status == 'success':
