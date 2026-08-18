@@ -32,11 +32,13 @@ jobs:
         run: |
           python - <<EOF
           import os
+          import github
           from github import Github
           from datetime import datetime
           
           # Initialize GitHub client
-          g = Github(os.environ['GITHUB_TOKEN'])
+          auth = github.Auth.Token(os.environ['GITHUB_TOKEN'])
+          g = Github(auth=auth)
           org_name = "platine-php"
           org = g.get_organization(org_name)
           
