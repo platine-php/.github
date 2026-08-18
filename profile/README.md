@@ -7,7 +7,6 @@
 » Easy deploy: using `composer`.
 
 ## Features
-
 -  A new generation PHP framework that doesn't depend on other libraries
 -  Modular and extensible design
 -  Learning it is also simple
